@@ -1,6 +1,6 @@
+package simfretemain;
 // importação unica de cada classe necessária para o funcionamento do código, assim faz economia de memória;
-// single import of each class required for the code to work, thus saving memory;
-
+// single import of each class required for the code to work, thus saving memory
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -15,15 +15,15 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-public class Program {
+public class Program2 {
 
     static class City {
-        String name;
+        String cityName;
         int cepStart;
         int cepEnd;
 
-        City(String name, int cepStart, int cepEnd) {
-            this.name = name;
+        City(String cityName, int cepStart, int cepEnd) {
+            this.cityName = cityName;
             this.cepStart = cepStart;
             this.cepEnd = cepEnd;
         }
@@ -85,8 +85,8 @@ public class Program {
                         int cepEnd = Integer.parseInt(ceps[1]);
 
                         for (City city : citys) {
-                            if (OriginCity == null && city.contain(cepStart)) OriginCity = city.name;
-                            if (destinyCity == null && city.contain(cepEnd)) destinyCity = city.name;
+                            if (OriginCity == null && city.contain(cepStart)) OriginCity = city.cityName;
+                            if (destinyCity == null && city.contain(cepEnd)) destinyCity = city.cityName;
                         }
                     }
                 }
